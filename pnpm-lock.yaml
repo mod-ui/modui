@@ -20,6 +20,9 @@ importers:
 
   apps/docs:
     dependencies:
+      '@mod-ui/registry':
+        specifier: workspace:*
+        version: link:../../packages/registry
       react:
         specifier: ^19.2.4
         version: 19.2.4
