@@ -1,0 +1,71 @@
+.root {
+	--button-bg: var(--color-primary);
+	--button-bg-hover: var(--color-primary-hover);
+	--button-color: var(--color-text-on-primary);
+	--button-border: transparent;
+	--button-padding: var(--spacing-sm) var(--spacing-lg);
+	--button-radius: var(--radius-md);
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--spacing-sm);
+	padding: var(--button-padding);
+	border: 1px solid var(--button-border);
+	border-radius: var(--button-radius);
+	background: var(--button-bg);
+	color: var(--button-color);
+	font-size: 0.875rem;
+	font-weight: 500;
+	line-height: 1;
+	cursor: pointer;
+	transition: background 150ms;
+}
+
+.root:hover {
+	background: var(--button-bg-hover);
+}
+
+.root:focus-visible {
+	outline: 2px solid var(--color-primary);
+	outline-offset: 2px;
+}
+
+.root[data-variant="secondary"] {
+	--button-bg: var(--color-bg-subtle);
+	--button-bg-hover: var(--color-border);
+	--button-color: var(--color-text);
+}
+
+.root[data-variant="outline"] {
+	--button-bg: transparent;
+	--button-bg-hover: var(--color-bg-subtle);
+	--button-color: var(--color-text);
+	--button-border: var(--color-border);
+}
+
+.root[data-variant="ghost"] {
+	--button-bg: transparent;
+	--button-bg-hover: var(--color-bg-subtle);
+	--button-color: var(--color-text);
+}
+
+.root[data-variant="danger"] {
+	--button-bg: var(--color-danger);
+	--button-bg-hover: var(--color-danger-hover);
+}
+
+.root[data-size="sm"] {
+	--button-padding: var(--spacing-xs) var(--spacing-md);
+	font-size: 0.75rem;
+}
+
+.root[data-size="lg"] {
+	--button-padding: var(--spacing-md) var(--spacing-lg);
+	font-size: 1rem;
+}
+
+.root[data-disabled] {
+	opacity: 0.5;
+	pointer-events: none;
+}
