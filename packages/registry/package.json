@@ -4,11 +4,14 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
+		"build": "tsx scripts/build.ts",
 		"check-types": "tsc --noEmit"
 	},
 	"devDependencies": {
 		"@repo/typescript-config": "workspace:*",
+		"@types/node": "^22.15.3",
 		"@types/react": "^19.2.14",
+		"tsx": "^4.21.0",
 		"typescript": "~5.9.3"
 	}
 }
